@@ -95,6 +95,52 @@ input {
 	content: url("../images/icon-arrow.svg");
 }
 
+@media (min-width: 769px) {
+
+	body {
+		display: grid;
+		grid-template-columns: auto max-content;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			"logo hero"
+			"headline hero"
+			"message hero"
+			"email hero";
+	}
+
+	.hero-desktop {
+		grid-area: hero;
+		height: 800px;
+	}
+
+	.logo {
+		grid-area: logo;
+	}
+
+	/* We're coming soon */
+	body p:nth-child(4) {
+		padding-top: 0;
+		grid-area: headline;
+	}
+
+	/* Hello fellow ... */
+	body p:nth-child(5) {
+		grid-area: message;
+	}
+
+	.input-wrapper {
+		grid-area: email;
+	}
+
+	.hero-mobile {
+		display: none;
+	}
+
+	.hero-desktop {
+		display: block;
+	}
+}
+
 @media (max-width: 270px) {
 
 	/* We're coming soon */
