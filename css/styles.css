@@ -19,10 +19,21 @@ img {
 }
 
 body {
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* text-align: center; */
 	height: 100dvh;
 	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-	background-color: black;
+	background-color: lightsalmon;
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
 .logo {
@@ -40,7 +51,7 @@ body {
 }
 
 /* We're coming soon */
-body p:nth-child(4) {
+.card p:nth-child(4) {
 	color: black;
 	padding-top: 4rem;
 	font-size: 3rem;
@@ -50,15 +61,16 @@ body p:nth-child(4) {
 }
 
 /* We're */
-body p:nth-child(4) span {
+.card p:nth-child(4) span {
 	font-weight: 300;
 	color: hsl(0, 36%, 70%);
 }
 
 /* Hello fellow ... */
-body p:nth-child(5) {
+.card p:nth-child(5) {
 	font-size: .9rem;
 	line-height: 1.5rem;
+	text-align: center;
 	padding: 1rem 2rem 0 2rem;
 	color: hsl(0, 36%, 70%);
 }
@@ -97,10 +109,12 @@ input {
 
 @media (min-width: 769px) {
 
-	body {
+	.card {
 		display: grid;
+		max-height: 800px;
+		max-width: 1440px;
 		grid-template-columns: auto max-content;
-		grid-template-rows: auto auto auto auto;
+		grid-template-rows:  auto auto auto;
 		grid-template-areas:
 			"logo hero"
 			"headline hero"
@@ -115,21 +129,30 @@ input {
 
 	.logo {
 		grid-area: logo;
+		width: 400px;
+		padding: 2rem 0 0 20%;
 	}
 
 	/* We're coming soon */
-	body p:nth-child(4) {
-		padding-top: 0;
+	.card p:nth-child(4) {
 		grid-area: headline;
+		text-align: start;
+		font-size: 4.5rem;
+		padding: 0 20% 0 20%;
 	}
 
 	/* Hello fellow ... */
-	body p:nth-child(5) {
+	.card p:nth-child(5) {
 		grid-area: message;
+		text-align: start;
+		padding: 0 20% 0 20%;
 	}
 
 	.input-wrapper {
 		grid-area: email;
+		width: 60%;
+		/* max-width: 830px; */
+		margin-left: 20%;
 	}
 
 	.hero-mobile {
@@ -152,6 +175,7 @@ input {
 		letter-spacing: .5rem;
 		font-weight: 700;
 	}
+
 }
 
 @media (max-width: 220px) {
