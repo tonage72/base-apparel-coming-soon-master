@@ -9,7 +9,7 @@ function validation() {
 	if (email.match(pattern)) {
 		inputWrapper.classList.add('valid');
 		inputWrapper.classList.remove('invalid');
-		submitBtn.style.backgroundColor = 'green';
+		submitBtn.style.backgroundColor = '#008000';
 		submitGood.style.display = 'block';
 		submitBad.style.display = 'none';
 	} else {
