@@ -22,7 +22,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* text-align: center; */
 	height: 100dvh;
 	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 	background-color: lightsalmon;
@@ -75,11 +74,33 @@ body {
 	color: hsl(0, 36%, 70%);
 }
 
-.input-wrapper {
+#input-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
 	position: relative;
 	width: clamp(220px, 85%, 320px);
 	margin: auto;
 	padding-top: 2rem;
+}
+
+#input-wrapper .submitbtn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 0px;
+	background-color: #f96262;
+	width: 5rem;
+	height: 50px;
+	border-radius: 2rem;
+	color: white;
+}
+
+#input-wrapper .submitbtn img {
+	display: none;
+	width: 10px;
 }
 
 /* Email input */
@@ -89,11 +110,11 @@ input {
 	width: 100%;
 	height: 50px;
 	border-radius: 2rem;
-	color: hsl(0, 36%, 70%);
+	color: black;
 	border: 1px solid hsl(0, 36%, 70%);
 }
 
-.input-wrapper::before {
+/* #input-wrapper::before {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -105,9 +126,9 @@ input {
 	right: 0px;
 	border-radius: 2rem;
 	content: url("../images/icon-arrow.svg");
-}
+} */
 
-@media (min-width: 769px) {
+@media (min-width: 1080px) {
 
 	.card {
 		display: grid;
@@ -148,7 +169,7 @@ input {
 		padding: 0 20% 0 20%;
 	}
 
-	.input-wrapper {
+	#input-wrapper {
 		grid-area: email;
 		width: 60%;
 		/* max-width: 830px; */
@@ -180,8 +201,8 @@ input {
 
 @media (max-width: 220px) {
 	input,
-	.input-wrapper,
-	.input-wrapper::before {
+	#input-wrapper,
+	#input-wrapper::before {
 		display: none;
 	}
 }
