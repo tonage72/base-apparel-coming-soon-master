@@ -23,13 +23,14 @@
     <div id="input-wrapper">
       <input type="text" id="email" placeholder="Email Address" onkeyup="validation()">
       <a href="#">
-        <div class="submitbtn">
+        <div class="submitbtn" onclick="submitValidation()">
           <img src="images/icon-arrow.svg" alt="" class="submitgood">
           <span class="submitbad">X</span>
         </div>
       </a>
-      <!-- <div class="emailokay">Email submitted.</div>
-      <div class="emailerror">Email not valid</div> -->
+      <div class="emailsubmitted">
+        Email submitted.
+      </div>
     </div>
   </div>
 </body>

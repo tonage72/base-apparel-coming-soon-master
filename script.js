@@ -1,4 +1,5 @@
 function validation() {
+
 	let email = document.getElementById('email').value;
 	const inputWrapper = document.getElementById('input-wrapper');
 	const submitBtn = document.querySelector('.submitbtn')
@@ -21,4 +22,9 @@ function validation() {
 		submitBad.style.display = 'block';
 		submitBtn.style.pointerEvents = "none";
 	}
+}
+
+function submitValidation() {
+	const emailSubmitted = document.querySelector('.emailsubmitted');
+	emailSubmitted.style.display = 'flex';
 }
