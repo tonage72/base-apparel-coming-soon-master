@@ -95,6 +95,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	pointer-events: none;
 	right: 0px;
 	background-color: #f96262;
 	width: 5rem;

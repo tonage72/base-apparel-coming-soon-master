@@ -12,11 +12,13 @@ function validation() {
 		submitBtn.style.backgroundColor = '#008000';
 		submitGood.style.display = 'block';
 		submitBad.style.display = 'none';
+		submitBtn.style.pointerEvents = "all";
 	} else {
 		inputWrapper.classList.remove('valid');
 		inputWrapper.classList.add('invalid');
 		submitBtn.style.backgroundColor = '#f96262';
 		submitGood.style.display = 'none';
 		submitBad.style.display = 'block';
+		submitBtn.style.pointerEvents = "none";
 	}
 }
