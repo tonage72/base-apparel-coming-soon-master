@@ -96,7 +96,7 @@ body {
 	justify-content: center;
 	pointer-events: none;
 	right: 0px;
-	background-color: #f96262;
+	background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 	width: 5rem;
 	height: 50px;
 	border-radius: 2rem;
